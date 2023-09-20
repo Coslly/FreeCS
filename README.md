@@ -1,14 +1,13 @@
-# FreeCS for game CS
+# FreeCS for game Counter-Strike
 - External Menu
 - Saveable System
 - GUI project: https://github.com/Coslly/EasyGUI-Lightweight.git
-- Build in Release | x86
-- C++
-# 😩It doesn't work!!!
-You need to modify the offset at the top of the Main.cpp file content.
+- C++ Build in Release | x86
+## 😩It doesn't work!!!
+You need to modify the offset at the top of the `Main.cpp` file content.
 
 The offset will change every game update.
-# 🤩Showcase
+## 🤩Showcase
 ![image](https://github.com/Coslly/FreeCS/blob/main/Show/S_1.png?raw=true)
 ![image](https://github.com/Coslly/FreeCS/blob/main/Show/S_2.png?raw=true)
 ![image](https://github.com/Coslly/FreeCS/blob/main/Show/S_3.png?raw=true)
