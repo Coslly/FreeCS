@@ -2,9 +2,11 @@
 - External Menu
 - Saveable System
 - GUI project: https://github.com/Coslly/EasyGUI-Lightweight.git
-- C++ Build in Release | x86
+- CS C++ Build in Release | x86
+- CS2 C++ Build in Release | x64
 ## 😩It doesn't work!!!
 You need to modify the offset at the top of the `Main.cpp` file content.
+Enter (bind "F13" "m_yaw 0.015";bind "F14" "m_yaw 0.004";bind F15 "+jump;-jump";) in the console.
 
 The offset will change every game update.
 ## 🤩Showcase
