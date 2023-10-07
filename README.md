@@ -16,5 +16,6 @@ The CS2 project is currently in the testing phase, so unknown problems may occur
 ![image](https://github.com/Coslly/FreeCS/blob/main/Show/S_1.png?raw=true)
 ![image](https://github.com/Coslly/FreeCS/blob/main/Show/S_2.png?raw=true)
 ![image](https://github.com/Coslly/FreeCS/blob/main/Show/S_3.png?raw=true)
+![image](https://github.com/Coslly/FreeCS/blob/main/Show/S_4.png?raw=true)
 # 💀Disclaimer
 I am not responsible for anything that happens when you use this software.
