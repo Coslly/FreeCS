@@ -1,5 +1,5 @@
 ﻿#include "Head.h"
-const string ReleaseDate = "[2023-10-02 00:30]";
+const string ReleaseDate = "[2023-10-10 18:00]";
 const string ApplicableVersion = "1573";
 EasyGUI::EasyGUI Free_GUI_VAR;
 EasyGUI::EasyGUI_IO Free_GUI_IO;
@@ -288,7 +288,7 @@ void Thread_Menu() noexcept
 			Free_GUI_VAR.GUI_Block_Panel(20, 20, 100, Free_GUI_VAR.Window_GetSize()[1] - 40, "", { "Legit","Misc","Settings" }, UI_Panel);
 			if (UI_Panel == 0)//Legit
 			{
-				vector<int> Block_Legit_Aimbot_ = Free_GUI_VAR.GUI_Block(150, 30, 280, "Aimbot");
+				const auto Block_Legit_Aimbot_ = Free_GUI_VAR.GUI_Block(150, 30, 280, "Aimbot");
 				Free_GUI_VAR.GUI_Checkbox(Block_Legit_Aimbot_, 1, "Enabled", UI_Legit_Aimbot);
 				Free_GUI_VAR.GUI_KeySelector<class Free_Menu_1>(Block_Legit_Aimbot_, 1, UI_Legit_Aimbot_Key);
 				Free_GUI_VAR.GUI_Checkbox({ Block_Legit_Aimbot_[0] + 20,Block_Legit_Aimbot_[1] }, 2, "Body aim(else head)", UI_Legit_Aimbot_BodyAim);
@@ -298,26 +298,26 @@ void Thread_Menu() noexcept
 				Free_GUI_VAR.GUI_Checkbox({ Block_Legit_Aimbot_[0] + 20,Block_Legit_Aimbot_[1] }, 6, "Auto shoot", UI_Legit_Aimbot_AutoShoot, { 255,150,150 });
 				Free_GUI_VAR.GUI_Slider<int, class Free_Menu_2>(Block_Legit_Aimbot_, 7, "Auto shoot interval ~ms", 0, 500, UI_Legit_Aimbot_AutoShoot_Interval, { 255,150,150 });
 				Free_GUI_VAR.GUI_Checkbox(Block_Legit_Aimbot_, 8, "Adaptive aimbot", UI_Legit_Aimbot_AdaptiveAimbot, { 200,200,150 });
-				vector<int> Block_Legit_Aimbot_Armory_ = Free_GUI_VAR.GUI_Block(150, 330, 220, "Armory");
+				const auto Block_Legit_Aimbot_Armory_ = Free_GUI_VAR.GUI_Block(150, 330, 220, "Armory");
 				Free_GUI_VAR.GUI_Slider<int, class Free_Menu_3>({ Block_Legit_Aimbot_Armory_[0] - 10,Block_Legit_Aimbot_Armory_[1] }, 1, "PISTOL range", 0, 100, UI_Legit_Aimbot_A_Range_PISTOL);
 				Free_GUI_VAR.GUI_Slider<float, class Free_Menu_4>({ Block_Legit_Aimbot_Armory_[0] - 10,Block_Legit_Aimbot_Armory_[1] }, 2, "PISTOL smooth", 3, 30, UI_Legit_Aimbot_A_Smooth_PISTOL);
 				Free_GUI_VAR.GUI_Slider<int, class Free_Menu_5>({ Block_Legit_Aimbot_Armory_[0] - 10,Block_Legit_Aimbot_Armory_[1] }, 3, "RIFLE range", 0, 100, UI_Legit_Aimbot_A_Range_RIFLE);
 				Free_GUI_VAR.GUI_Slider<float, class Free_Menu_6>({ Block_Legit_Aimbot_Armory_[0] - 10,Block_Legit_Aimbot_Armory_[1] }, 4, "RIFLE smooth", 3, 30, UI_Legit_Aimbot_A_Smooth_RIFLE);
 				Free_GUI_VAR.GUI_Slider<int, class Free_Menu_7>({ Block_Legit_Aimbot_Armory_[0] - 10,Block_Legit_Aimbot_Armory_[1] }, 5, "SNIPER range", 0, 100, UI_Legit_Aimbot_A_Range_SNIPER);
 				Free_GUI_VAR.GUI_Slider<float, class Free_Menu_8>({ Block_Legit_Aimbot_Armory_[0] - 10,Block_Legit_Aimbot_Armory_[1] }, 6, "SNIPER smooth", 3, 30, UI_Legit_Aimbot_A_Smooth_SNIPER);
-				vector<int> Block_Legit_Triggerbot_ = Free_GUI_VAR.GUI_Block(580, 30, 130, "Triggerbot");
+				const auto Block_Legit_Triggerbot_ = Free_GUI_VAR.GUI_Block(580, 30, 130, "Triggerbot");
 				Free_GUI_VAR.GUI_Checkbox(Block_Legit_Triggerbot_, 1, "Enabled", UI_Legit_Triggerbot);
 				Free_GUI_VAR.GUI_KeySelector<class Free_Menu_9>(Block_Legit_Triggerbot_, 1, UI_Legit_Triggerbot_Key);
 				Free_GUI_VAR.GUI_Slider<int, class Free_Menu_10>(Block_Legit_Triggerbot_, 2, "Shoot interval ~ms", 1, 500, UI_Legit_Triggerbot_ShootInterval);
 				Free_GUI_VAR.GUI_Slider<int, class Free_Menu_11>(Block_Legit_Triggerbot_, 3, "Shoot duration ~ms", 1, 1000, UI_Legit_Triggerbot_ShootDuration);
-				vector<int> Block_Legit_PreciseAim_ = Free_GUI_VAR.GUI_Block(580, 180, 130, "Precise aim");
+				const auto Block_Legit_PreciseAim_ = Free_GUI_VAR.GUI_Block(580, 180, 130, "Precise aim");
 				Free_GUI_VAR.GUI_Checkbox(Block_Legit_PreciseAim_, 1, "Enabled", UI_Legit_PreciseAim);
 				Free_GUI_VAR.GUI_Slider<float, class Free_Menu_12>(Block_Legit_PreciseAim_, 2, "Default sensitivity", 0, 0.022, UI_Legit_PreciseAim_DefaultSensitivity);
 				Free_GUI_VAR.GUI_Slider<float, class Free_Menu_13>(Block_Legit_PreciseAim_, 3, "Enable sensitivity", 0, 0.015, UI_Legit_PreciseAim_EnableSensitivity);
-				vector<int> Block_Legit_RemoveRecoil_ = Free_GUI_VAR.GUI_Block(580, 330, 100, "Remove recoil");
+				const auto Block_Legit_RemoveRecoil_ = Free_GUI_VAR.GUI_Block(580, 330, 100, "Remove recoil");
 				Free_GUI_VAR.GUI_Checkbox(Block_Legit_RemoveRecoil_, 1, "Enabled", UI_Legit_RemoveRecoil);
 				Free_GUI_VAR.GUI_Checkbox({ Block_Legit_RemoveRecoil_[0] + 20,Block_Legit_RemoveRecoil_[1] }, 2, "Lateral repair", UI_Legit_RemoveRecoil_LateralRepair);
-				vector<int> Block_Legit_Backtracking_ = Free_GUI_VAR.GUI_Block(580, 450, 100, "Backtracking");
+				const auto Block_Legit_Backtracking_ = Free_GUI_VAR.GUI_Block(580, 450, 100, "Backtracking");
 				Free_GUI_VAR.GUI_Checkbox(Block_Legit_Backtracking_, 1, "Enabled", UI_Legit_Backtracking, { 200,200,150 });
 				Free_GUI_VAR.GUI_Slider<int, class Free_Menu_14>(Block_Legit_Backtracking_, 2, "Maximum time", 0, 500, UI_Legit_Backtracking_Time);
 				Free_GUI_VAR.GUI_Tips(Block_Legit_Aimbot_, 6, "Prefer Ragebot.", { 255,150,150 });
@@ -329,7 +329,7 @@ void Thread_Menu() noexcept
 			}
 			else if (UI_Panel == 1)//Misc
 			{
-				vector<int> Block_Misc_Misc_ = Free_GUI_VAR.GUI_Block(150, 30, 210, "Misc");
+				const auto Block_Misc_Misc_ = Free_GUI_VAR.GUI_Block(150, 30, 210, "Misc");
 				Free_GUI_VAR.GUI_Checkbox(Block_Misc_Misc_, 1, "Bunny hop", UI_Misc_BunnyHop);
 				Free_GUI_VAR.GUI_Text(Block_Misc_Misc_, 2, "99% trigger", { 200,200,150 });
 				Free_GUI_VAR.GUI_KeySelector<class Free_Menu_15>(Block_Misc_Misc_, 2, UI_Misc_BunnyHop_100Tri);
@@ -338,17 +338,17 @@ void Thread_Menu() noexcept
 				Free_GUI_VAR.GUI_Slider<int, class Free_Menu_17>(Block_Misc_Misc_, 4, "Draw delay ~ms", 1, 30, UI_Misc_ESP_RenderSleep);
 				Free_GUI_VAR.GUI_Checkbox(Block_Misc_Misc_, 5, "Hit sound", UI_Misc_HitSound);
 				Free_GUI_VAR.GUI_Checkbox(Block_Misc_Misc_, 6, "Auto clear decals", UI_Misc_AutoClearDecals);
-				vector<int> Block_Misc_Sonar_ = Free_GUI_VAR.GUI_Block(150, 260, 130, "Sonar");
+				const auto Block_Misc_Sonar_ = Free_GUI_VAR.GUI_Block(150, 260, 130, "Sonar");
 				Free_GUI_VAR.GUI_Checkbox(Block_Misc_Sonar_, 1, "Enabled", UI_Misc_Sonar);
 				Free_GUI_VAR.GUI_KeySelector<class Free_Menu_18>(Block_Misc_Sonar_, 1, UI_Misc_Sonar_Key);
 				Free_GUI_VAR.GUI_Slider<int, class Free_Menu_19>(Block_Misc_Sonar_, 2, "Range far", 500, 1000, UI_Misc_Sonar_Range_Far);
 				Free_GUI_VAR.GUI_Slider<int, class Free_Menu_20>(Block_Misc_Sonar_, 3, "Range near", 0, 500, UI_Misc_Sonar_Range_Near);
-				vector<int> Block_Misc_Radar_ = Free_GUI_VAR.GUI_Block(580, 270, 160, "Radar");
+				const auto Block_Misc_Radar_ = Free_GUI_VAR.GUI_Block(580, 270, 160, "Radar");
 				Free_GUI_VAR.GUI_Checkbox(Block_Misc_Radar_, 1, "Enabled", UI_Misc_Radar);
 				Free_GUI_VAR.GUI_Checkbox({ Block_Misc_Radar_[0] + 20,Block_Misc_Radar_[1] }, 2, "Follow angle", UI_Misc_Radar_FollowAngle);
 				Free_GUI_VAR.GUI_Slider<float, class Free_Menu_21>(Block_Misc_Radar_, 3, "Radar range", 0.2, 25, UI_Misc_Radar_Range);
 				Free_GUI_VAR.GUI_Slider<int, class Free_Menu_22>(Block_Misc_Radar_, 4, "Radar size", 150, 500, UI_Misc_Radar_Size);
-				vector<int> Block_Misc_Resolution_ = Free_GUI_VAR.GUI_Block(580, 30, 220, "Screen resolution");
+				const auto Block_Misc_Resolution_ = Free_GUI_VAR.GUI_Block(580, 30, 220, "Screen resolution");
 				Free_GUI_VAR.GUI_Button(Block_Misc_Resolution_, 1, "3840 × 2160", 78, UI_Settings_Res_3840);
 				Free_GUI_VAR.GUI_Button(Block_Misc_Resolution_, 2, "2560 × 1440", 78, UI_Settings_Res_2560);
 				Free_GUI_VAR.GUI_Button(Block_Misc_Resolution_, 3, "1920 × 1080", 78, UI_Settings_Res_1920);
@@ -362,7 +362,7 @@ void Thread_Menu() noexcept
 			}
 			else if (UI_Panel == 2)//Settings
 			{
-				vector<int> Block_Settings_Settings_ = Free_GUI_VAR.GUI_Block(150, 30, 490, "Settings");
+				const auto Block_Settings_Settings_ = Free_GUI_VAR.GUI_Block(150, 30, 490, "Settings");
 				Free_GUI_VAR.GUI_Text(Block_Settings_Settings_, 1, "FreeCS", Free_GUI_VAR.Global_Get_EasyGUI_Color());
 				Free_GUI_VAR.GUI_Text(Block_Settings_Settings_, 1, "            for CS:GO (External)", { 100,100,100 });
 				Free_GUI_VAR.GUI_Text(Block_Settings_Settings_, 2, "Release date: " + ReleaseDate, { 100,100,100 });
@@ -394,9 +394,8 @@ void Thread_Misc() noexcept
 {
 	System::Log("Load Thread: Thread_Misc()");
 	Window::Windows WaterMark_Window_Var;
-	const HWND Render_Window_HWND_ = WaterMark_Window_Var.Create_RenderBlock_Alpha(Window::Get_Resolution()[0], 30, System::Rand_String(20));//Create RenderWindow
-	Window::Render WaterMark_Render_Var;
-	WaterMark_Render_Var.CreatePaint(Render_Window_HWND_, 0, 0, Window::Get_Resolution()[0], 30);
+	const auto Render_Window_HWND_ = WaterMark_Window_Var.Create_RenderBlock_Alpha(Window::Get_Resolution()[0], 30, System::Rand_String(20));//Create RenderWindow
+	Window::Render WaterMark_Render_Var; WaterMark_Render_Var.CreatePaint(Render_Window_HWND_, 0, 0, Window::Get_Resolution()[0], 30);
 	while (true)
 	{
 		//--------------------------------------------------------------------------------------------------------------------------------------------------
@@ -420,7 +419,7 @@ void Thread_Misc() noexcept
 			WaterMark_Window_Var.Set_Window_Pos(0, 0);
 			if (System::Sleep_Tick<class WaterMark_Window_Sleep_Class_>(200))//Sleep no in thread.
 			{
-				const vector<int> Menu_Color = Free_GUI_IO.GUIColor;
+				const auto Menu_Color = Free_GUI_IO.GUIColor;
 				static string WaterMark_String = "";
 				short WaterMark_String_Size = strlen(WaterMark_String.c_str()) * 4.8;
 				if (!CS_Window_HWND)WaterMark_String = "FreeCS | CS not found | " + System::Time_String();
@@ -428,7 +427,7 @@ void Thread_Misc() noexcept
 					WaterMark_String = "FreeCS | " + System::Time_String();
 					WaterMark_String_Size = strlen(WaterMark_String.c_str()) * 5.2;
 				}
-				vector<int> Watermark_Pos = { Window::Get_Resolution()[0] - WaterMark_String_Size - 10,10 };
+				const vector<int> Watermark_Pos = { Window::Get_Resolution()[0] - WaterMark_String_Size - 10,10 };
 				WaterMark_Render_Var.Render_SolidRect(0, 0, 9999, 9999, { 0,0,0 });
 				WaterMark_Render_Var.RenderA_SolidRect(Watermark_Pos[0], Watermark_Pos[1], WaterMark_String_Size, 14, { 1,1,1,150 });
 				WaterMark_Render_Var.RenderA_GradientRect(Watermark_Pos[0], Watermark_Pos[1], WaterMark_String_Size / 2, 1, { Menu_Color[0] / 2, Menu_Color[1] / 2, Menu_Color[2] / 2,255 }, { Menu_Color[0], Menu_Color[1], Menu_Color[2],255 });
@@ -552,7 +551,7 @@ void Thread_Misc() noexcept
 		if (UI_Settings_ShowDebugWindow)ShowWindow(GetConsoleWindow(), true);//ShowConsoleWindow
 		else ShowWindow(GetConsoleWindow(), false);//HideConsoleWindow
 		Free_GUI_IO = Free_GUI_VAR.Get_IO();
-		Free_GUI_IO.GUIColor = { (int)floor(sin((float)GetTickCount64() / 1700 * 2 + 2) * 127 + 128),(int)floor(sin((float)GetTickCount64() / 1700 * 2 + 2 + 2) * 127 + 128),(int)floor(sin((float)GetTickCount64() / 1700 * 2 + 4 + 2) * 127 + 128) };
+		if (!UI_Settings_CustomMenuColor)Free_GUI_IO.GUIColor = { (int)floor(sin((float)GetTickCount64() / 3500 * 2 + 2) * 127 + 128),(int)floor(sin((float)GetTickCount64() / 3500 * 2 + 2 + 2) * 127 + 128),(int)floor(sin((float)GetTickCount64() / 3500 * 2 + 4 + 2) * 127 + 128) };
 		//--------------------------------------------------------------------------------------------------------------------------------------------------
 		if (CS_Window_State)//Misc Funtions
 		{
@@ -614,9 +613,9 @@ void Thread_Funtion_Aimbot() noexcept
 			short Aim_Parts;
 			if (UI_Legit_Aimbot_BodyAim)Aim_Parts = 5;//Parts 8Head 5Body
 			else Aim_Parts = 8;
-			Variable::AimbotVector3 Recoil_Angle;
-			if (UI_Legit_Aimbot_RemoveRecoil)Recoil_Angle = CS_Mem_.Read<Variable::AimbotVector3>(CS_Mem_.Read<uintptr_t>(Module_engine + dwClientState) + dwClientState_ViewAngles) + CS_Mem_.Read<Variable::AimbotVector3>(LocalPlayer + m_aimPunchAngle) * 2;//RemoveRecoil
-			else Recoil_Angle = CS_Mem_.Read<Variable::AimbotVector3>(CS_Mem_.Read<uintptr_t>(Module_engine + dwClientState) + dwClientState_ViewAngles);//original angle
+			Variable::Vector3 Recoil_Angle;
+			if (UI_Legit_Aimbot_RemoveRecoil)Recoil_Angle = CS_Mem_.Read<Variable::Vector3>(CS_Mem_.Read<uintptr_t>(Module_engine + dwClientState) + dwClientState_ViewAngles) + CS_Mem_.Read<Variable::Vector3>(LocalPlayer + m_aimPunchAngle) * 2;//RemoveRecoil
+			else Recoil_Angle = CS_Mem_.Read<Variable::Vector3>(CS_Mem_.Read<uintptr_t>(Module_engine + dwClientState) + dwClientState_ViewAngles);//original angle
 			const auto CrosshairId = CS_Mem_.Read<int32_t>(LocalPlayer + m_iCrosshairId);
 			const auto playerm = CS_Mem_.Read<uintptr_t>(Module_client + dwEntityList + (CrosshairId - 1) * 0x10);//entity
 			for (short i = 0; i <= 20; ++i)
@@ -627,8 +626,8 @@ void Thread_Funtion_Aimbot() noexcept
 				if ((UI_Legit_Aimbot_TriggerOnAiming && !CS_Mem_.Read<BOOL>(playerm + m_iHealth)) || (UI_Legit_Aimbot_JudgingWall && !CS_Mem_.Read<BOOL>(player + m_bSpotted)))//TriggerOnAiming & JudgingWall
 					continue;
 				const auto boneMatrix = CS_Mem_.Read<uintptr_t>(player + m_dwBoneMatrix);
-				const auto angle = Variable::CalculateAngle(CS_Mem_.Read<Variable::AimbotVector3>(LocalPlayer + m_vecOrigin) + CS_Mem_.Read<Variable::AimbotVector3>(LocalPlayer + m_vecViewOffset),
-					Variable::AimbotVector3{CS_Mem_.Read<float>(boneMatrix + 0x30 * Aim_Parts + 0x0C), CS_Mem_.Read<float>(boneMatrix + 0x30 * Aim_Parts + 0x1C), CS_Mem_.Read<float>(boneMatrix + 0x30 * Aim_Parts + 0x2C)}, Recoil_Angle);
+				const auto angle = Variable::CalculateAngle(CS_Mem_.Read<Variable::Vector3>(LocalPlayer + m_vecOrigin) + CS_Mem_.Read<Variable::Vector3>(LocalPlayer + m_vecViewOffset),
+					Variable::Vector3{CS_Mem_.Read<float>(boneMatrix + 0x30 * Aim_Parts + 0x0C), CS_Mem_.Read<float>(boneMatrix + 0x30 * Aim_Parts + 0x1C), CS_Mem_.Read<float>(boneMatrix + 0x30 * Aim_Parts + 0x2C)}, Recoil_Angle);
 				const auto FovG = hypot(angle.x, angle.y);
 				if (FovG <= Aim_Range)
 				{
@@ -657,14 +656,14 @@ void Thread_Funtion_AdaptiveAimbot() noexcept
 		{
 			if (LocalPlayer_Active_Weapon[1] != 2)continue;
 			float Aim_Range = 2.5;
-			if (abs(CS_Mem_.Read<Variable::AimbotVector3>(LocalPlayer + m_aimPunchAngle).x) * 2 >= Aim_Range)Aim_Range = abs(CS_Mem_.Read<Variable::AimbotVector3>(LocalPlayer + m_aimPunchAngle).x) * 0.5;
+			if (abs(CS_Mem_.Read<Variable::Vector3>(LocalPlayer + m_aimPunchAngle).x) * 2 >= Aim_Range)Aim_Range = abs(CS_Mem_.Read<Variable::Vector3>(LocalPlayer + m_aimPunchAngle).x) * 0.5;
 			for (short i = 0; i <= 20; ++i)
 			{
 				const auto player = CS_Mem_.Read<uintptr_t>(Module_client + dwEntityList + i * 0x10);
 				if (!CS_Mem_.Read<BOOL>(LocalPlayer + m_iHealth) || !CS_Mem_.Read<BOOL>(player + m_iHealth) || CS_Mem_.Read<int32_t>(player + m_iTeamNum) == CS_Mem_.Read<int32_t>(LocalPlayer + m_iTeamNum) || !CS_Mem_.Read<BOOL>(player + m_bSpotted) || CS_Mem_.Read<BOOL>(player + m_bDormant))
 					continue;
 				const auto boneMatrix = CS_Mem_.Read<uintptr_t>(player + m_dwBoneMatrix);
-				const auto angle = Variable::CalculateAngle(CS_Mem_.Read<Variable::AimbotVector3>(LocalPlayer + m_vecOrigin) + CS_Mem_.Read<Variable::AimbotVector3>(LocalPlayer + m_vecViewOffset), Variable::AimbotVector3{ CS_Mem_.Read<float>(boneMatrix + 0x30 * 8 + 0x0C), CS_Mem_.Read<float>(boneMatrix + 0x30 * 8 + 0x1C), CS_Mem_.Read<float>(boneMatrix + 0x30 * 8 + 0x2C) }, CS_Mem_.Read<Variable::AimbotVector3>(CS_Mem_.Read<uintptr_t>(Module_engine + dwClientState) + dwClientState_ViewAngles) + CS_Mem_.Read<Variable::AimbotVector3>(LocalPlayer + m_aimPunchAngle) * 2);
+				const auto angle = Variable::CalculateAngle(CS_Mem_.Read<Variable::Vector3>(LocalPlayer + m_vecOrigin) + CS_Mem_.Read<Variable::Vector3>(LocalPlayer + m_vecViewOffset), Variable::Vector3{ CS_Mem_.Read<float>(boneMatrix + 0x30 * 8 + 0x0C), CS_Mem_.Read<float>(boneMatrix + 0x30 * 8 + 0x1C), CS_Mem_.Read<float>(boneMatrix + 0x30 * 8 + 0x2C) }, CS_Mem_.Read<Variable::Vector3>(CS_Mem_.Read<uintptr_t>(Module_engine + dwClientState) + dwClientState_ViewAngles) + CS_Mem_.Read<Variable::Vector3>(LocalPlayer + m_aimPunchAngle) * 2);
 				const auto FovG = hypot(angle.x, angle.y);
 				if (!angle.IsZero() && FovG <= Aim_Range)
 				{
@@ -767,7 +766,7 @@ void Thread_Funtion_BunnyHop() noexcept
 void Thread_Funtion_ESP() noexcept
 {
 	System::Log("Load Thread: Thread_Funtion_ESP()");
-	const HWND FreeCS_ESP_RenderWindow = Window::NVIDIA_Overlay();
+	const auto FreeCS_ESP_RenderWindow = Window::NVIDIA_Overlay();
 	Window::Render FreeCS_ESP_Render_Paint_Var; FreeCS_ESP_Render_Paint_Var.CreatePaint(FreeCS_ESP_RenderWindow, 0, 0, Window::Get_Resolution()[0], Window::Get_Resolution()[1]);
 	while (true)
 	{
@@ -776,14 +775,14 @@ void Thread_Funtion_ESP() noexcept
 		if (CS_Window_State && UI_Misc_ESP && (UI_Misc_ESP_Key == 0 || System::Get_Key(UI_Misc_ESP_Key)))//When the cs window is at the front. Press Key
 		{
 			MoveWindow(FreeCS_ESP_RenderWindow, Window::Get_WindowResolution(CS_Window_HWND)[2], Window::Get_WindowResolution(CS_Window_HWND)[3], Window::Get_WindowResolution(CS_Window_HWND)[0], Window::Get_WindowResolution(CS_Window_HWND)[1], TRUE);//Bigger
-			const Variable::view_matrix_t vm = CS_Mem_.Read<Variable::view_matrix_t>(Module_client + dwViewMatrix);
+			const auto vm = CS_Mem_.Read<Variable::view_matrix_t>(Module_client + dwViewMatrix);
 			for (short i = 0; i <= 20; ++i)
 			{
 				const auto entity = CS_Mem_.Read<uintptr_t>(Module_client + dwEntityList + i * 0x10);
 				if (CS_Mem_.Read<BOOL>(entity + m_iHealth) && CS_Mem_.Read<int32_t>(entity + m_iTeamNum) != CS_Mem_.Read<int32_t>(LocalPlayer + m_iTeamNum))
 				{
-					Variable::Vector3 敌人坐标 = CS_Mem_.Read<Variable::Vector3>(entity + m_vecOrigin); 敌人坐标.z = 敌人坐标.z + 40;
-					Variable::Vector3 screenpos = WorldToScreen(Window::Get_WindowResolution(CS_Window_HWND)[0], Window::Get_WindowResolution(CS_Window_HWND)[1], 敌人坐标, vm);
+					auto 敌人坐标 = CS_Mem_.Read<Variable::Vector3>(entity + m_vecOrigin); 敌人坐标.z = 敌人坐标.z + 40;
+					const auto screenpos = WorldToScreen(Window::Get_WindowResolution(CS_Window_HWND)[0], Window::Get_WindowResolution(CS_Window_HWND)[1], 敌人坐标, vm);
 					FreeCS_ESP_Render_Paint_Var.RenderA_GradientLine(Window::Get_WindowResolution(CS_Window_HWND)[0] / 2, Window::Get_WindowResolution(CS_Window_HWND)[1], screenpos.x + 4, screenpos.y + 3, { 0,0,0,0 }, { Free_GUI_IO.GUIColor[0],Free_GUI_IO.GUIColor[1],Free_GUI_IO.GUIColor[2],180 });
 					FreeCS_ESP_Render_Paint_Var.Render_HollowCircle(screenpos.x + 4, screenpos.y, 10, { Free_GUI_IO.GUIColor[0] / 2,Free_GUI_IO.GUIColor[1] / 2,Free_GUI_IO.GUIColor[2] / 2 }, 2);
 					FreeCS_ESP_Render_Paint_Var.Render_String(screenpos.x + 8, screenpos.y + 2, to_string(CS_Mem_.Read<int32_t>(entity + m_iHealth)), "Small Fonts", 10, Free_GUI_IO.GUIColor);
@@ -802,7 +801,7 @@ void Thread_Funtion_Sonar() noexcept
 		Sleep(1);
 		if (CS_Window_State && UI_Misc_Sonar && (UI_Misc_Sonar_Key == 0 || System::Get_Key(UI_Misc_Sonar_Key)))//When the cs window is at the front. Press Key
 		{
-			const Variable::Vector3 自身坐标 = CS_Mem_.Read<Variable::Vector3>(LocalPlayer + m_vecOrigin);//LocalPlayer Pos
+			const auto 自身坐标 = CS_Mem_.Read<Variable::Vector3>(LocalPlayer + m_vecOrigin);//LocalPlayer Pos
 			for (short i = 0; i <= 20; ++i)
 			{
 				Sleep(1);
@@ -823,7 +822,7 @@ void Thread_Funtion_Radar() noexcept
 {
 	System::Log("Load Thread: Thread_Funtion_Radar()");
 	Window::Windows RadarWindowsBL; Window::Render RenderDBBL;
-	HWND RadarRenderWindow = RadarWindowsBL.Create_Window(UI_Misc_Radar_Size, UI_Misc_Radar_Size + 15, System::Rand_String(22), true);//Create Render Window
+	const auto RadarRenderWindow = RadarWindowsBL.Create_Window(UI_Misc_Radar_Size, UI_Misc_Radar_Size + 15, System::Rand_String(22), true);//Create Render Window
 	RadarWindowsBL.Set_WindowAlpha(180);
 	RadarWindowsBL.Set_Window_Pos(17, 40);//To Game Radar Pos
 	RenderDBBL.CreatePaint(RadarRenderWindow, 0, 0, 500, 500 + 15);//Create Paint
@@ -835,7 +834,7 @@ void Thread_Funtion_Radar() noexcept
 			const short RadarSizeAnimation = Variable::Animation<class Class_Radar_Window_Size>(UI_Misc_Radar_Size, 5);
 			const float RadarRangeAnimation = Variable::Animation<class Class_Radar_Window_Range>(UI_Misc_Radar_Range, 5);
 			RadarWindowsBL.Set_Window_Size(RadarSizeAnimation, RadarSizeAnimation + 15);//Animation
-			Variable::Vector3 LocalPlayerPos = CS_Mem_.Read<Variable::Vector3>(LocalPlayer + m_vecOrigin);//localPlayerPos
+			const auto LocalPlayerPos = CS_Mem_.Read<Variable::Vector3>(LocalPlayer + m_vecOrigin);//localPlayerPos
 			const auto viewAngles = CS_Mem_.Read<Variable::Vector3>(CS_Mem_.Read<uintptr_t>(Module_engine + dwClientState) + dwClientState_ViewAngles);
 			if (!RadarWindowsBL.Window_Move(15))
 			{
@@ -843,7 +842,7 @@ void Thread_Funtion_Radar() noexcept
 				RenderDBBL.Render_GradientRect(0, 0, RadarWindowsBL.Get_Window_Size()[0], 14, { Free_GUI_IO.GUIColor[0] / 2,Free_GUI_IO.GUIColor[1] / 2,Free_GUI_IO.GUIColor[2] / 2 }, { Free_GUI_IO.GUIColor[0] / 3,Free_GUI_IO.GUIColor[1] / 3,Free_GUI_IO.GUIColor[2] / 3 }, false);
 				RenderDBBL.Render_GradientRect(0, 14, RadarWindowsBL.Get_Window_Size()[0], 1, { Free_GUI_IO.GUIColor[0] / 3,Free_GUI_IO.GUIColor[1] / 3,Free_GUI_IO.GUIColor[2] / 3 }, { Free_GUI_IO.GUIColor[0] / 2,Free_GUI_IO.GUIColor[1] / 2,Free_GUI_IO.GUIColor[2] / 2 }, false);//Title Rect
 				RenderDBBL.Render_String(3 + 1, 1 + 1, "FreeCS Radar", "Small Fonts", 12, { 0,0,0 });
-				RenderDBBL.Render_String(3, 1, "FreeCS Radar", "Small Fonts", 12, { Free_GUI_IO.GUIColor[0], Free_GUI_IO.GUIColor[1], Free_GUI_IO.GUIColor[2] });//Title
+				RenderDBBL.Render_String(3, 1, "FreeCS Radar", "Small Fonts", 12, Free_GUI_IO.GUIColor);//Title
 				if (UI_Misc_Radar_FollowAngle)RenderDBBL.Render_GradientTriangle({ RadarSizeAnimation / 2, RadarSizeAnimation / 2 + 15 ,Ang_Pos(RadarSizeAnimation / 2, RadarSizeAnimation / 2 + 15, RadarSizeAnimation / 2, 135, 0)[0], Ang_Pos(RadarSizeAnimation / 2, RadarSizeAnimation / 2 + 15, RadarSizeAnimation / 2, 135, 0)[1] ,Ang_Pos(RadarSizeAnimation / 2, RadarSizeAnimation / 2 + 15, RadarSizeAnimation / 2, 225, 0)[0], Ang_Pos(RadarSizeAnimation / 2, RadarSizeAnimation / 2 + 15, RadarSizeAnimation / 2, 225, 0)[1] }, { Free_GUI_IO.GUIColor[0] / 5,Free_GUI_IO.GUIColor[1] / 5,Free_GUI_IO.GUIColor[2] / 5 }, { 0,0,0 }, { 0,0,0 });
 				else RenderDBBL.Render_GradientTriangle({ RadarSizeAnimation / 2, RadarSizeAnimation / 2 + 15 ,Ang_Pos(RadarSizeAnimation / 2, RadarSizeAnimation / 2 + 15, RadarSizeAnimation / 2, viewAngles.y, 45)[0], Ang_Pos(RadarSizeAnimation / 2, RadarSizeAnimation / 2 + 15, RadarSizeAnimation / 2, viewAngles.y, 45)[1] ,Ang_Pos(RadarSizeAnimation / 2, RadarSizeAnimation / 2 + 15, RadarSizeAnimation / 2, viewAngles.y, 135)[0], Ang_Pos(RadarSizeAnimation / 2, RadarSizeAnimation / 2 + 15, RadarSizeAnimation / 2, viewAngles.y, 135)[1] }, { Free_GUI_IO.GUIColor[0] / 5,Free_GUI_IO.GUIColor[1] / 5,Free_GUI_IO.GUIColor[2] / 5 }, { 0,0,0 }, { 0,0,0 });//Self Aimpos
 				RenderDBBL.Render_HollowCircle(RadarSizeAnimation / 2, RadarSizeAnimation / 2 + 15, RadarSizeAnimation / 100 * 3, { 255,255,255 }, 1);//Self Pos
@@ -860,8 +859,8 @@ void Thread_Funtion_Radar() noexcept
 						else if (敌人屏幕坐标[0] < 0) 敌人屏幕坐标[0] = 0;
 						if (敌人屏幕坐标[1] > RadarSizeAnimation + 15)敌人屏幕坐标[1] = RadarSizeAnimation + 15;
 						else if (敌人屏幕坐标[1] < 15)敌人屏幕坐标[1] = 15;
-						if (CS_Mem_.Read<BOOL>(entity + m_bSpotted))RenderDBBL.Render_SolidCircle(敌人屏幕坐标[0], 敌人屏幕坐标[1], RadarSizeAnimation / 100 * 3, { Free_GUI_IO.GUIColor[0],Free_GUI_IO.GUIColor[1],Free_GUI_IO.GUIColor[2] }, { Free_GUI_IO.GUIColor[0],Free_GUI_IO.GUIColor[1],Free_GUI_IO.GUIColor[2] }, 1);
-						else RenderDBBL.Render_HollowCircle(敌人屏幕坐标[0], 敌人屏幕坐标[1], RadarSizeAnimation / 100 * 3, { Free_GUI_IO.GUIColor[0],Free_GUI_IO.GUIColor[1],Free_GUI_IO.GUIColor[2] }, 1);
+						if (CS_Mem_.Read<BOOL>(entity + m_bSpotted))RenderDBBL.Render_SolidCircle(敌人屏幕坐标[0], 敌人屏幕坐标[1], RadarSizeAnimation / 100 * 3, Free_GUI_IO.GUIColor, Free_GUI_IO.GUIColor, 1);
+						else RenderDBBL.Render_HollowCircle(敌人屏幕坐标[0], 敌人屏幕坐标[1], RadarSizeAnimation / 100 * 3, Free_GUI_IO.GUIColor, 1);
 					}
 				}
 				RenderDBBL.DrawPaint();
