@@ -8,8 +8,6 @@
 You need to modify the offset at the top of the `Main.cpp` file content.
 
 The offset will change every game update.
-
-The CS2 project is currently in the testing phase, so unknown problems may occur.
 ## 🤩Showcase
 ![image](https://github.com/Coslly/FreeCS/blob/main/Show/S_1.png?raw=true)
 ![image](https://github.com/Coslly/FreeCS/blob/main/Show/S_2.png?raw=true)
