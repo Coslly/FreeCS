@@ -8,6 +8,14 @@
 You need to modify the offset at the top of the `Main.cpp` file content.
 
 The offset will change every game update.
+
+Or you can add the `FreeCS.ofs` file to the same directory.
+```cpp
+0x123456//dwLocalPlayerPawn
+0x123456//dwEntityList
+0x123456//dwViewAngles
+0x123456//dwViewMatrix
+```
 ## 🤩Showcase
 ![image](https://github.com/Coslly/FreeCS/blob/main/Show/S_1.png?raw=true)
 ![image](https://github.com/Coslly/FreeCS/blob/main/Show/S_2.png?raw=true)
