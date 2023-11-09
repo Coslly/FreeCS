@@ -4,12 +4,6 @@
 - GUI project: https://github.com/Coslly/EasyGUI-Lightweight.git
 - CS C++ Build in Release | x86
 - CS2 C++ Build in Release | x64
-```cpp
-0x123456//dwLocalPlayerPawn
-0x123456//dwEntityList
-0x123456//dwViewAngles
-0x123456//dwViewMatrix
-```
 ## 🤩Showcase
 ![image](https://github.com/Coslly/FreeCS/blob/main/Show/S_1.png?raw=true)
 ![image](https://github.com/Coslly/FreeCS/blob/main/Show/S_2.png?raw=true)
