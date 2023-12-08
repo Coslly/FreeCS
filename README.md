@@ -1,4 +1,4 @@
-# FreeCS for game Counter-Strike
+# FreeCS for game Counter-Strike series
 - External Menu
 - Saveable System
 - Absolutely safe!!!
