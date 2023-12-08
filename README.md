@@ -1,6 +1,7 @@
 # FreeCS for game Counter-Strike
 - External Menu
 - Saveable System
+- Absolutely safe!!!
 - GUI project: https://github.com/Coslly/EasyGUI-Lightweight.git
 - CS C++ Build in Release | x86
 - CS2 C++ Build in Release | x64
