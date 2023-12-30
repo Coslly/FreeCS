@@ -10,4 +10,5 @@
 ![image](https://github.com/Coslly/FreeCS/blob/main/Show.png?raw=true)
 # 💀Disclaimer
 I am not responsible for anything that happens when you use this software.
+
 This project has stopped updating on 2023-12-30.
