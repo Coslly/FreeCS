@@ -10,6 +10,8 @@
 FreeCS is old version of Rensen. since the latest version of Rensen was open source many people used it to make money so i decided not to make Rensen source code public anymore!!!
 
 if u want to learn more about this u can find many old versions of Rensen forks on Github
+
+i will release the latest binaries of Rensen in this repository
 ## 🤩Showcase
 ![image](https://github.com/Coslly/FreeCS/blob/main/Show.png?raw=true)
 # 💀Disclaimer
